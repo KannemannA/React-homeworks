@@ -1,6 +1,11 @@
-.item{
-    border: 1px dashed rebeccapurple;
+.item {
+    list-style: none;
     padding: 16px;
-    border-radius: 3px;
-    margin: 16px;
-}
+    border: 1px solid rebeccapurple;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  :global(.compact-theme) .item {
+    padding: 8px;
+  }

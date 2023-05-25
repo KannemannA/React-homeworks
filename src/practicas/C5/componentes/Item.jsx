@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Lista.modules.css"
+import styles from "./Item.module.css"
 
 
 function Item(props) {

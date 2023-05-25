@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Lista.modules.css"
+import styles from "./Lista.module.css"
 
 function Lista(props) {
   return (

@@ -1,4 +1,11 @@
 .lista{
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:global(.compact-theme) .lista{
+    gap: 8px;
 }
