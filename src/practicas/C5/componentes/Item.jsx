@@ -1,8 +1,10 @@
 import React from 'react'
+import styles from "./Lista.modules.css"
 
-function Item() {
+
+function Item(props) {
   return (
-    <div>Item</div>
+    <li className={styles.item}>{props.children}</li>
   )
 }
 

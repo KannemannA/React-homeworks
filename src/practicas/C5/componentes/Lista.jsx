@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from "./Lista.modules.css"
 
-function Lista() {
+function Lista(props) {
   return (
-    <div>Lista</div>
+    <ul className={styles.lista}>{props.children}</ul>
   )
 }
 
