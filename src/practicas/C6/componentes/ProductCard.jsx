@@ -4,8 +4,7 @@ import stylesLista from "../../C5/componentes/Lista.module.css"
 
 function Card(props) {
     const pasaManos=()=>{
-      const {addToCart, ...data}= props
-        addToCart(data);
+      props.addToCart(props.id)
     }
   return (
     <>

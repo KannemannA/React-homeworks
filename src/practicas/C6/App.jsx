@@ -8,43 +8,11 @@ import { Lista, Items } from "./componentes/Lista";
 let id=0
 let id1=0
 function App() {
-  const lista =[]
-  let booleans=true
-  const changuito = (props) => {
-    return lista.push(props)
+  const changuito = (id) => {
+    console.log(`Se agrego el siguiente producto al carrito: ${id}`)
   }
-  const changuito2 =()=> {
-    booleans?booleans=false:booleans=true;
-    if (lista.length===0) {
-      return (
-        <>
-          <p>No tienes ningun producto en el changuito</p>
-          <br />
-          <hr />
-        </>
-    )} else{
-      return(
-        <div>
-          {lista.map((item)=>{
-            console.log(item)
-            //no entendi como hacerlo hasta aca llegue
-            return (
-              <>
-                <Items key={item.id+id++} productoListaNombre={item.nombre} precio={item.precio} descripcion={item.descripcion} />
-                <br />
-                <hr />
-              </>
-            )}
-          )}
-        </div>
-      )
-    }
-  }
-  const result = changuito2()
   return (
   <>
-    <button onClick={changuito2}>Carrito</button>
-    {booleans?result:undefined}
     {/* <Lista>
       {dataProducto.map((product)=>{
         return (
