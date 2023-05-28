@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cards = (props) => {
+const Card = (props) => {
   return (
     <>
         <header>{props.title}</header>
@@ -10,4 +10,4 @@ const Cards = (props) => {
   )
 }
 
-export default Cards
+export default Card
