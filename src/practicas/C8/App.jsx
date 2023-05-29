@@ -22,26 +22,28 @@ function App() {
     { id: "16", nombre: "aradia", edad: 33, email: "aradia@medigo.com"},
   ]
   const [cuentaSiguiendo, setCuentaSiguiendo]= useState([])
-  const [verificar,setVerificar]= useState(false)
   const agregarCuenta=(datos)=>{
+    if (!cuentaSiguiendo.some((item)=>item.id===datos.id)){
       setCuentaSiguiendo([...cuentaSiguiendo, datos])
-      setVerificar(cuentaSiguiendo.find(cuenta=>cuenta.id ===datos.id)!==undefined)
+    } else {
+      alert("ya sigues a esta cuenta")
+    }
   }
-  const eliminarCuenta=()=>{
-      
+  const eliminarCuenta=(datos)=>{
+      setCuentaSiguiendo(cuentaSiguiendo.filter((item)=>item.id!==datos.id))
   }
   return (
     <>
       <h2>cuentas que sigues</h2>
       {cuentaSiguiendo.map((usuarios)=>{
         return (
-          <Cuenta key={usuarios.id} data={usuarios} validador={verificar}/>
+          <Cuenta key={usuarios.id} data={usuarios} onEliminar={true} eliminar={eliminarCuenta}/>
         )}
       )}
       <h2>cuentas Disponibles</h2>
       {usuarios.map((usuarios)=>{
         return (
-          <Cuenta key={usuarios.id} data={usuarios} agregar={agregarCuenta}/>
+          <Cuenta key={usuarios.id} data={usuarios} agregar={agregarCuenta} onAgregar={true}/>
         )}
       )}
     </>

@@ -2,7 +2,8 @@ import React from 'react'
 
 function Cuenta(props) {
     const {nombre, edad, email}=props.data
-    const agregarCuenta=()=>{ props.agregar(props.data)}
+    const agregarCuenta=()=>{props.agregar(props.data)}
+    const eliminarCuenta=()=>{props.eliminar(props.data)}
   return (
   <div>
     <h3>
@@ -10,8 +11,8 @@ function Cuenta(props) {
         {edad} <br />
         {email} <br />
     </h3>
-    <button onClick={agregarCuenta}>seguir</button>
-    {props.validador?<button onClick={eliminarCuenta}>eliminar</button>:undefined}
+    {props.onAgregar?<button onClick={agregarCuenta}>seguir</button>: undefined}
+    {props.onEliminar?<button onClick={eliminarCuenta}>eliminar</button>:undefined}
     <hr />
   </div>
   )
