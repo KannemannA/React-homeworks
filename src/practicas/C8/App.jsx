@@ -37,13 +37,13 @@ function App() {
       <h2>cuentas que sigues</h2>
       {cuentaSiguiendo.map((usuarios)=>{
         return (
-          <Cuenta key={usuarios.id} data={usuarios} onEliminar={true} eliminar={eliminarCuenta}/>
+          <Cuenta key={usuarios.id} data={usuarios} eliminar={eliminarCuenta}/>
         )}
       )}
       <h2>cuentas Disponibles</h2>
       {usuarios.map((usuarios)=>{
         return (
-          <Cuenta key={usuarios.id} data={usuarios} agregar={agregarCuenta} onAgregar={true}/>
+          <Cuenta key={usuarios.id} data={usuarios} agregar={agregarCuenta}/>
         )}
       )}
     </>

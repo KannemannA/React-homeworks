@@ -11,8 +11,8 @@ function Cuenta(props) {
         {edad} <br />
         {email} <br />
     </h3>
-    {props.onAgregar?<button onClick={agregarCuenta}>seguir</button>: undefined}
-    {props.onEliminar?<button onClick={eliminarCuenta}>eliminar</button>:undefined}
+    {props.agregar?<button onClick={agregarCuenta}>seguir</button>: undefined}
+    {props.eliminar?<button onClick={eliminarCuenta}>eliminar</button>:undefined}
     <hr />
   </div>
   )
