@@ -1,19 +1,19 @@
 import React from 'react'
 
-let id=0
 function Card(props) {
   const eliminarPedido=(e)=>{
-    console.log(e)
+    props.eliminar(e)
   }
   return (
     <>
       {props.data.map((item)=>{
-        <div key={id++}>
+        return(
+        <div key={item.id} id={item.id}>
           <h4>Pedido</h4>
-          <p>{item}</p>
-          <button onClick={eliminarPedido}>Eliminar</button>
+          <p>{item.datos}</p>
+          <button onClick={()=>eliminarPedido(item)}>Eliminar</button>
         </div>
-      })}
+      )})}
     </>
   )
 }

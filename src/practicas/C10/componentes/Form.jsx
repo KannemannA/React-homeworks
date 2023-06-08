@@ -1,9 +1,13 @@
 import React from 'react'
 
+let id1=0
 function Form(props) {
     const pasamanos=(e)=>{
         e.preventDefault()
-        props.data(e.target[0].value)
+        props.data({
+          id: id1++,
+          datos:e.target[0].value
+        })
     }
   return (
     <form onSubmit={pasamanos}>
