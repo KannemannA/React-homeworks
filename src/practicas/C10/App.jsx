@@ -10,7 +10,7 @@ function App() {
   }
   const eliminarData=(datos)=>{
     setListaPedido(listaPedido.filter(item=>item.id!==datos.id))
-  }//
+  }
   return (
     <>
       <h2>Haga su pedido aqui!</h2>
