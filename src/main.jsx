@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './practicas/C15/App.jsx'
+import App from './practicas/C16/App.jsx'
 import './index.css'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </>
 )
